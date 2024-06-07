@@ -14,7 +14,7 @@ func Test(t *testing.T) {
 	}
 
 	raft := NewRaft(addrs, 0)
-	HeatBeat(context.Background(), raft)
+	HeartBeat(context.Background(), raft)
 	time.Sleep(1 * time.Hour)
 }
 
@@ -26,7 +26,7 @@ func Test2(t *testing.T) {
 	}
 
 	raft := NewRaft(addrs, 1)
-	HeatBeat(context.Background(), raft)
+	HeartBeat(context.Background(), raft)
 	time.Sleep(1 * time.Hour)
 }
 
@@ -38,6 +38,6 @@ func Test3(t *testing.T) {
 	}
 
 	raft := NewRaft(addrs, 2)
-	HeatBeat(context.Background(), raft)
+	HeartBeat(context.Background(), raft)
 	time.Sleep(1 * time.Hour)
 }

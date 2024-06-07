@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func HeatBeat(ctx context.Context, rf *Raft) error {
+func HeartBeat(ctx context.Context, rf *Raft) error {
 	for !rf.killed() {
 		log.Printf("pid:%d term:%d role:%d", rf.me, rf.currentTerm, rf.role)
 		time.Sleep(time.Duration(150+rand.Intn(200)) * time.Millisecond)
